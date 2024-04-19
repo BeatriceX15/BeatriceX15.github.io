@@ -33,9 +33,9 @@ footer {
     width: 100%;
 }
 #about img {
-    max-width: 120px; 
+    max-width: 140px; 
     height: auto;
-    margin-bottom: 20px;
+    margin-bottom: 10px;
 }
 
 .email {
