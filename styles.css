@@ -33,7 +33,7 @@ footer {
     width: 100%;
 }
 #about img {
-    max-width: 200px; /* Adjust the size as needed */
+    max-width: 150px; 
     height: auto;
     margin-bottom: 20px;
 }
