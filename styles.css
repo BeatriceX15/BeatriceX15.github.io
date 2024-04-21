@@ -9,6 +9,10 @@ body {
   font-family: 'Montserrat', sans-serif;
   background-color: #141414; /* Dark background color from the second file */
   color: #fff; /* Font color from the first file */
+  
+  margin: 0;
+  padding: 0;
+
 }
 
 /* Typography */
@@ -67,6 +71,7 @@ section {
   justify-content: center;
   align-items: center;
   padding: 100px 20px;
+  width: 100%;
 }
 
 /* Hero Section */
