@@ -3,38 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Beatrice Xu - Personal Website</title>
+    <title>BeatriceX15</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
-        <h1>Beatrice Xu</h1>
+        <nav>
+            <ul>
+                <li><a href="#hero" class="smooth-scroll">Home</a></li>
+                <li><a href="#about" class="smooth-scroll">About</a></li>
+                <li><a href="#portfolio" class="smooth-scroll">Portfolio</a></li>
+                <li><a href="#contact" class="smooth-scroll">Contact</a></li>
+            </ul>
+        </nav>
     </header>
-    
-    <main>      
-        <section id="about">
-            <h2>About Me</h2>
-            <img src="photo4.jpg" alt="Your Name">
-            <p>UCLA 2022-2025</p>
-            <p>B.S. in Statistics & Data Science</p>
-            <p>B.A. in Architectural Studies</p>
-        </section>     
-        
-        <section id="portfolio">
-            <h2>Portfolio</h2>
-            <p>My GitHub profile can be found <a href="https://github.com/BeatriceX15" target="_blank">here</a>.</p>
-            <p>Check out my architecture portfolio <a href="https://issuu.com/beatrice-luxingbai/docs/beatrice_2024.4.reduced" target="_blank">here</a>.</p>
-            <p>My work on UCLA AUD Website <a href="https://aud.ucla.edu/student-work/archive/tangled-home-ospital" target="_blank">here</a>.</p>
+
+    <main>
+        <section id="hero" class="hero">
+            <h1>Beatrice Xu</h1>
         </section>
 
-        <section id="contact">
-            <h2>Contact Me</h2>
-            <p>You can reach me at: <a href="mailto:beatrice15@g.ucla.edu" class="email">beatrice15@g.ucla.edu</a></p>
+        <section id="about" class="about">
+            <h2>About</h2>
+            <div class="content">
+                <img src="photo4.jpg" alt="Your Name">
+                <div class="text">
+                    <p>UCLA 2022-2025</p>
+                    <p>B.S. in Statistics &amp; Data Science</p>
+                    <p>B.A. in Architectural Studies</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="portfolio" class="portfolio">
+            <h2>Portfolio</h2>
+            <div class="portfolio-item">
+                <p>My  <a href="https://github.com/BeatriceX15" target="_blank">GitHub Profile</a></p>
+                
+            </div>
+            <div class="portfolio-item">
+                <p>Check out my  <a href="https://issuu.com/beatrice-luxingbai/docs/beatrice_2024.4.reduced" target="_blank">Architecture Portfolio</a></p>
+                
+            </div>
+            <div class="portfolio-item">
+                <p>My work on  <a href="https://aud.ucla.edu/student-work/archive/tangled-home-ospital" target="_blank">UCLA AUD Website</a></p>
+                
+            </div>
+        </section>
+
+        <section id="contact" class="contact">
+            <h2>Contact</h2>
+            <p>Email: <a href="mailto:beatrice15@g.ucla.edu">beatrice15@g.ucla.edu</a></p>
         </section>
     </main>
-    
+
     <footer>
         <p>&copy; 2024 Beatrice Xu</p>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.10/SmoothScroll.min.js"></script>
+    
+    <script>
+        // Smooth scrolling
+    new SmoothScroll('a.smooth-scroll', {
+    speed: 800,
+    speedAsDuration: true,
+    offset: 80
+    });
+
+// Debounce scroll event
+    let isScrolling = false;
+
+    window.addEventListener('scroll', function() {
+        if (!isScrolling) {
+            window.requestAnimationFrame(function() {
+            // Your scrolling logic here
+            const scrollPosition = window.scrollY + window.innerHeight;
+            const sections = document.querySelectorAll('section');
+
+            sections.forEach(function(section) {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.offsetHeight;
+
+                if (scrollPosition >= sectionTop + sectionHeight / 2) {
+                    const currentSection = document.querySelector('nav a[href="#' + section.id + '"]');
+                    if (currentSection) {
+                        // Remove active class from all links
+                        document.querySelectorAll('nav a').forEach(function(link) {
+                            link.classList.remove('active');
+                        });
+                        // Add active class to the current link
+                        currentSection.classList.add('active');
+                    }
+                }
+            });
+
+            isScrolling = false;
+        });
+
+        isScrolling = true;
+    }
+});
+
+    document.addEventListener('DOMContentLoaded', function() {
+    // Smooth scrolling for navigation links
+    const navLinks = document.querySelectorAll('nav a');
+    navLinks.forEach(function(link) {
+        link.addEventListener('click', function(event) {
+            event.preventDefault(); // Prevent default behavior of jumping to the section
+            const targetId = this.getAttribute('href').substring(1); // Get the ID of the target section
+            const targetSection = document.getElementById(targetId);
+            if (targetSection) {
+                // Scroll to the target section smoothly
+                targetSection.scrollIntoView({ behavior: 'smooth' });
+            }
+        });
+    });
+});
+
+
+    </script>
 </body>
 </html>
