@@ -1,45 +1,175 @@
+/* Reset and basic styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh; /* Ensure the body fills the viewport height */
+  font-family: 'Montserrat', sans-serif;
+  background-color: #141414; /* Dark background color from the second file */
+  color: #fff; /* Font color from the first file */
 }
 
+/* Typography */
+h1, h2 {
+  font-family: 'Orbitron', sans-serif;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+}
+
+a {
+  color: #ff4081;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+a:hover {
+  color: #e91e63;
+}
+
+/* Header and Navigation */
 header {
-    background-color: #333;
-    color: #fff;
-    padding: 20px;
+  background-color: #1a1a1a;
+  padding: 20px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 999;
 }
 
-main {
-    padding: 20px;
-    flex: 1; /* Allow main content area to grow and fill remaining space */
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
 }
 
-#about img {
-    max-width: 140px; 
-    height: auto;
-    margin-bottom: 0px;
+nav ul li {
+  margin: 0 20px;
 }
 
-.email {
-    color: blue; /* Change the color as needed */
-    text-decoration: underline; /* Underline the link */
-    cursor: pointer; /* Change the cursor to indicate it's clickable */
+nav ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
 }
 
-.email:hover {
-    text-decoration: none; /* Remove underline on hover */
+nav ul li a:hover {
+  color: #ff4081;
 }
 
+/* Sections */
+section {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 100px 20px;
+}
+
+/* Hero Section */
+.hero {
+  background: linear-gradient(to bottom, #1a1a1a, #2b2a2a); /* Gradient from the first file */
+  text-align: center;
+}
+
+.hero h1 {
+  font-size: 72px;
+  margin-bottom: 20px;
+  color: #ff4081; /* Font color from the first file */
+  text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+}
+
+/* About Section */
+.about {
+  background-color: #262626; /* Darker gray background from the second file */
+}
+
+.about h2 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #ff4081; /* Font color from the first file */
+  text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+}
+
+.about .content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.about img {
+  max-width: 300px;
+  height: auto;
+  margin-right: 40px;
+}
+
+.about .text {
+  text-align: center;
+}
+
+.about p {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+/* Portfolio Section */
+.portfolio {
+  background-color: #333333; /* Darker gray background from the second file */
+}
+
+.portfolio h2 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #ff4081; /* Font color from the first file */
+  text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+}
+
+.portfolio-item {
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.portfolio-item p {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.portfolio-item a {
+  display: inline-block;
+  padding: 10px 20px;
+  background-color: #262626; /* Darker gray button background from the second file */
+  border: 2px solid #ff4081; /* Red button border from the first file */
+  border-radius: 5px;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  font-size: 18px;
+}
+
+.portfolio-item a:hover {
+  background-color: #ff4081; /* Red button background on hover from the first file */
+  color: #fff; /* Font color from the first file */
+}
+
+/* Contact Section */
+.contact {
+  background-color: #262626; /* Darker gray background from the second file */
+}
+
+.contact h2 {
+  font-size: 48px;
+  margin-bottom: 40px;
+  color: #ff4081; /* Font color from the first file */
+  text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+}
+
+.contact p {
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+/* Footer */
 footer {
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    padding: 10px;
-    position: relative;
-    bottom: 0;
-    width: 100%;
+  background-color: #1a1a1a; /* Dark background color from the first file */
 }
