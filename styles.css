@@ -7,9 +7,8 @@
 
 body {
   font-family: 'Montserrat', sans-serif;
-  background-color: #141414; 
-  color: #fff; 
-  overflow-x: hidden; 
+  background-color: #1a1a1a; /* Dark background color */
+  color: #ff4081; /* Font color from the first file */
 }
 
 /* Typography */
@@ -20,18 +19,18 @@ h1, h2 {
 }
 
 a {
-  color: #ff4081;
+  color: #ff5e57; /* Red link color */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 a:hover {
-  color: #e91e63;
+  color: #ff8b87; /* Lighter red on hover */
 }
 
 /* Header and Navigation */
 header {
-  background-color: #1a1a1a;
+  background-color: #1a1a1a; /* Dark background color */
   padding: 20px;
   position: fixed;
   top: 0;
@@ -51,13 +50,13 @@ nav ul li {
 }
 
 nav ul li a {
-  color: #fff;
+  color: #ff4081; /* Font color from the first file */
   text-decoration: none;
   transition: color 0.3s ease;
 }
 
 nav ul li a:hover {
-  color: #ff4081;
+  color: #ff5e57; /* Red navigation link color on hover */
 }
 
 /* Sections */
@@ -67,44 +66,47 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 100px 20px;
+  padding: 100px 20px; /* Added padding to the sides */
+  overflow: hidden; /* Prevent content from overflowing */
 }
 
 /* Hero Section */
 .hero {
-  background: linear-gradient(to bottom, #1a1a1a, #2b2a2a); 
+  background: linear-gradient(to bottom, #1a1a1a, #333333); /* Gradient from dark to darker gray */
   text-align: center;
 }
 
 .hero h1 {
   font-size: 72px;
   margin-bottom: 20px;
-  color: #ff4081; 
-  text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+  color: #ff4081; /* Font color from the first file */
+  text-shadow: 0 0 10px rgba(255, 94, 87, 0.5); /* Soft red text shadow */
 }
 
 /* About Section */
 .about {
-  background-color: #262626; 
+  background-color: #262626; /* Darker gray background */
+  padding: 20px; /* Added padding for content */
 }
 
 .about h2 {
   font-size: 48px;
   margin-bottom: 40px;
-  color: #ff4081; 
-  text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+  color: #ff4081; /* Font color from the first file */
+  text-shadow: 0 0 10px rgba(255, 94, 87, 0.5); /* Soft red text shadow */
 }
 
 .about .content {
   display: flex;
+  flex-direction: column; /* Changed to column for mobile view */
   align-items: center;
   justify-content: center;
 }
 
 .about img {
-  max-width: 300px;
+  max-width: 100%;
   height: auto;
-  margin-right: 40px;
+  margin-bottom: 20px;
 }
 
 .about .text {
@@ -118,14 +120,15 @@ section {
 
 /* Portfolio Section */
 .portfolio {
-  background-color: #333333; 
+  background-color: #333333; /* Darker gray background */
+  padding: 20px; /* Added padding for content */
 }
 
 .portfolio h2 {
   font-size: 48px;
   margin-bottom: 40px;
-  color: #ff4081; 
-  text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+  color: #ff4081; /* Font color from the first file */
+  text-shadow: 0 0 10px rgba(255, 94, 87, 0.5); /* Soft red text shadow */
 }
 
 .portfolio-item {
@@ -141,28 +144,29 @@ section {
 .portfolio-item a {
   display: inline-block;
   padding: 10px 20px;
-  background-color: #262626; 
-  border: 2px solid #ff4081;
+  background-color: #262626; /* Darker gray button background */
+  border: 2px solid #ff4081; /* Red button border */
   border-radius: 5px;
   transition: background-color 0.3s ease, color 0.3s ease;
   font-size: 18px;
 }
 
 .portfolio-item a:hover {
-  background-color: #ff4081; 
-  color: #fff; 
+  background-color: #ff4081; /* Red button background on hover */
+  color: #e6e6e6; /* Light gray text color on hover */
 }
 
 /* Contact Section */
 .contact {
-  background-color: #262626; 
+  background-color: #262626; /* Darker gray background */
+  padding: 20px; /* Added padding for content */
 }
 
 .contact h2 {
   font-size: 48px;
   margin-bottom: 40px;
-  color: #ff4081; 
-  text-shadow: 0 0 10px rgba(255, 64, 129, 0.5);
+  color: #ff4081; /* Font color from the first file */
+  text-shadow: 0 0 10px rgba(255, 94, 87, 0.5); /* Soft red text shadow */
 }
 
 .contact p {
@@ -172,5 +176,5 @@ section {
 
 /* Footer */
 footer {
-  background-color: #1a1a1a; 
+  background-color: #1a1a1a; /* Dark background color */
 }
