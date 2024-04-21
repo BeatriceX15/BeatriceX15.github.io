@@ -108,9 +108,10 @@ section {
 }
 
 .about img {
-  max-width: 300px;
+  max-width: 100%;
   height: auto;
-  margin-right: 40px;
+  margin-right: 0;
+  margin-bottom: 20px;
 }
 
 .about .text {
